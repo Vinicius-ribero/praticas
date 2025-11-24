@@ -193,3 +193,126 @@ const bttn = document.getElementById("bttn");
     bttn.disabled = (texto === "");
 })
 
+
+//-----VALIDAÇÃO DE E-MAIL---
+
+function isEmail(v) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+document.getElementById('check').addEventListener('click', () => {
+  const v = document.getElementById('email').value.trim();
+
+  document.getElementById('msg').textContent =
+    isEmail(v) ? 'Formato válido ✅' : 'Formato inválido ❌';
+});
+
+
+
+//--FRASES ALEATORIAS-->
+const frase = document.getElementById("frase");
+const gerar = document.getElementById("gerar");
+
+const frases = [
+  'Persistência vence o talento.',
+  'Comece pequeno, pense grande.',
+  'Erro é sinal de tentativa.',
+  'Aprenda rápido: errar é parte.',
+  'Consistência constrói resultados.',
+  'Código ruim hoje; melhor amanhã.',
+  'Pequenas vitórias acumulam.',
+  'Programa, testa, repete.',
+  'Seja curioso, depois crítico.',
+  'Melhore 1% a cada dia.'
+];
+
+
+document.getElementById("gerar").addEventListener("click", () => {
+  const i = Math.floor(Math.random() * frases.length);
+  document.getElementById("frase").textContent = frases[i];
+});
+
+
+//---MENU HAMBURGUER---
+document.getElementById("menu").addEventListener("click", () =>{
+  if(getComputedStyle(nav).display === "none"){
+    nav.style.display = "inline-block";
+  }else{
+    nav.style.display = "none";
+  }
+})
+
+//--VALIDAÇÃO DE FORMULÁRIO------
+
+/*document.getElementById('enviar').addEventListener('click', () => {
+  const name = document.getElementById('name').value.trim();
+  const age = parseInt(document.getElementById('idade').value, 10);
+  const email = document.getElementById('email').value.trim();
+  const out = document.getElementById('output');
+
+  if (!name) {
+    out.textContent = 'Erro: Nome vazio';
+    return;
+  }
+
+  if (Number.isNaN(age) || age < 18) {
+    out.textContent = 'Erro: Deve ter 18+';
+    return;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    out.textContent = 'Erro: Email inválido';
+    return;
+  }
+
+  out.textContent = `OK — ${name}, ${age} anos, ${email}`;
+});*/
+
+
+document.getElementById("enviar").addEventListener("click", () =>{
+  const name = document.getElementById("nome").value.trim();
+  const age = parseInt(document.getElementById("idade").value, 10);
+  const email = document.getElementById("email").value.trim();
+  const out = document.getElementById("output");
+
+  if(!name){
+    out.textContent = "Erro: Nome vazio";
+  }
+  if(Number.isNaN(age) || age < 18){
+    out.textContent = "Erro: Email inválido";
+    return;
+  }
+
+  if("!/^[^\s@]+@[^\s@]+\.[^\s@]+$/")
+  out.textContent = `Ok - ${name}, ${age}anos , ${email};`
+})
+
+
+//---TABS---
+
+const tabs = document.querySelectorAll(".tab");
+
+tabs.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // 1. Esconde TODAS as abas
+    document.querySelectorAll(".box").forEach(box => {
+      if (box.id === "a" || box.id === "b" || box.id === "c") {
+        box.classList.add("hidden");
+      }
+    });
+
+    // 2. Mostra a aba selecionada
+    const tabId = btn.getAttribute("data-tab");
+    document.getElementById(tabId).classList.remove("hidden");
+  });
+});
+
+
+
+
+
+
+
+
+
