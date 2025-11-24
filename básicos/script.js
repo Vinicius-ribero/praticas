@@ -151,8 +151,8 @@ document.getElementById("btnAdd").onclick = () =>{
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
-      document.body.style.background = "#111";
-      document.body.style.color = "white";
+      document.body.style.background = "black";
+      document.body.style.color = "black";
       document.querySelector("h1").style.color = "white";
     } else {
       document.body.style.background = "";
@@ -160,4 +160,36 @@ document.getElementById("btnAdd").onclick = () =>{
     }
   };
 })();
+
+
+//----OCCULTAR SENHA------
+
+const inp = document.getElementById("isenha");
+const btn = document.getElementById("mostrar");
+
+btn.addEventListener("click", () =>{
+  if(inp.type === "password"){
+    inp.type = "text"
+   btn.textContent = "Ocultar"; 
+  }else{
+    inp.type ="password";
+    btn.textContent = "mostrar";
+  }
+})
+
+//---Desabilitar botão quando input vazio----
+
+const inpt = document.getElementById("inpt");
+const bttn = document.getElementById("bttn");
+
+  // Toda vez que o usuário digitar algo no input
+  inpt.addEventListener("click", () =>{
+
+  // Remove espaços das laterais e verifica se o campo está vazio
+    const texto = inpt.value.trim();
+
+  // Se estiver vazio → desabilita o botão
+  // Se tiver texto → habilita o botão
+    bttn.disabled = (texto === "");
+})
 
