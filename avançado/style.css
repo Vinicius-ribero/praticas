@@ -1,0 +1,122 @@
+:root{
+    font-family:Inter,
+    system-ui,
+    Arial,
+    sans-serif}
+  body{
+    margin:0;
+    background:#f6f7fb;
+    color:#111;
+    padding:18px
+  }
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+    ;padding:10px 0
+  }
+  h1{
+    margin:0 0 10px 0
+  }
+  .box{
+    background:#fff;
+    padding:16px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(20,20,60,0.06);
+    margin-bottom:18px
+  }
+  button{
+    cursor:pointer;
+    padding:8px 12px;
+    border-radius:8px;
+    border:0;
+    background:#2563eb;
+    color:#fff;
+  }
+  input,select,textarea{
+    padding:8px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    width:100%;
+    box-sizing:border-box;
+    margin-top:6px
+  }
+  .row{
+    display:flex;
+    gap:10px
+  }
+  .small{
+    width:120px
+  }
+  nav.mobile{
+    display:none
+  }
+  .nav-toggle{
+    display:none;
+    padding:8px;
+    background:#111;
+    color:#fff;
+    border-radius:8px;
+  }
+  
+  ul{
+    padding-left:18px;
+  }
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+  }
+  .card{
+    padding:12px;
+    border-radius:8px;
+    background:#fafafa;
+    border:1px solid #eee
+  }
+  .tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:12px
+  }
+  .tab{
+    padding:8px 12px;
+    border-radius:8px;
+    background:#e6eefc;
+    cursor:pointer;
+  }
+  .tab.active{
+    background:#2563eb;
+    color:#fff;
+  }
+  .carousel{
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+  }
+  .slides{
+    display:flex;
+    transition:transform .35s ease
+  }
+  .slide{
+    min-width:100%;
+    padding:20px;
+    box-sizing:border-box;
+  }
+  .tooltip{
+    display:inline-block;
+    border-bottom:1px dotted #333;
+    cursor:help
+  }
+  .search-input{
+    margin-bottom:12px
+  
+  }
+  @media(max-width:700px){
+    .row{flex-direction:column};
+    .nav-toggle{display:inline-block};
+    nav.desktop{display:none};
+    nav.mobile{display:block;background:#fff;
+      padding:10px;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(20,20,60,0.06)}
+  }

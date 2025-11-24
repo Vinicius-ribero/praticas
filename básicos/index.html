@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Treino de JavaScript - by Liz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Treino Básico de JavaScript</h1>
+
+<!-- ========================== -->
+<!--     EXERCÍCIO 1: Contador  -->
+<!-- ========================== -->
+
+<div class="box">
+    <h2>1. Contador</h2>
+    <p id="contadorNumero">0</p>
+
+    <button id="btnMais">+</button>
+    <button id="btnMenos">-</button>
+</div>
+
+<!-- ============================== -->
+<!-- EXERCÍCIO 2: Mudar cor do fundo -->
+<!-- ============================== -->
+
+<div class="box">
+    <h2>2. Mudar Cor do Fundo</h2>
+    <button onclick="mudarCor('red')" id="red">Vermelho</button>
+    <button onclick="mudarCor('blue')" id=" blue">Azul</button>
+    <button onclick="mudarCor('green')" id="green">Verde</button><br>
+    <button onclick="mudarCor('lightgray')" id="limpar">Limpar</button>
+</div>
+
+<!-- ================================ -->
+<!-- EXERCÍCIO 3: Lista de Tarefas   -->
+<!-- ================================ -->
+
+<div class="box">
+    <h2>3. To-Do List</h2>
+
+    <input id="inputTarefa" placeholder="Digite uma tarefa...">
+    <button id="btnAdd">Adicionar</button>
+
+    <ul id="listaTarefas"></ul>
+</div>
+
+
+ <!-- Exercício: Adivinhar número -->
+  <div class="box">
+    <h2>Jogo: Adivinhar Número</h2>
+    <p>Estou pensando em um número entre 1 e 100...</p>
+    <input type="number" id="palpite" placeholder="Seu palpite">
+    <button id="btnTentar">Tentar</button>
+    <p id="respostaJogo"></p>
+  </div>
+
+  <!-- Exercício: Cronômetro -->
+  <div class="box">
+    <h2>Cronômetro</h2>
+    <p id="displayCrono">00:00</p>
+    <button id="btnStart">Iniciar</button>
+    <button id="btnStop">Parar</button>
+    <button id="btnReset">Resetar</button>
+  </div>
+
+  <!-- Exercício: Calculadora -->
+  <div class="box">
+    <h2>Calculadora Simples</h2>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <select id="operacao">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <button id="btnCalc">Calcular</button>
+    <p>Resultado: <span id="resultadoCalc"></span></p>
+  </div>
+
+  <!-- Exercício: Lista de Compras com Array -->
+  <div class="box">
+    <h2>Lista de Compras (Array)</h2>
+    <input type="text" id="itemCompra" placeholder="Adicionar item">
+    <button id="btnAddItem">Adicionar</button>
+    <ul id="listaCompras"></ul>
+  </div>
+
+  <!-- Exercício: Animação de Quadrado -->
+  <div class="box">
+    <h2>Animação de Quadrado</h2>
+    <p>Clique nos botões para mover o quadrado:</p>
+    <button id="btnLeft">Esquerda</button>
+    <button id="btnRight">Direita</button>
+    <button id="btnUp">Cima</button>
+    <button id="btnDown">Baixo</button>
+    <div id="quadrado"></div>
+  </div>
+
+  <!--DARK MODE-->
+
+  <div class="box">
+    <h2>Alternar Modo Escuro/claro</h2>
+    <div id="controls">
+      <button id="toggle"> Alternar Modo 👁️‍🗨️</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

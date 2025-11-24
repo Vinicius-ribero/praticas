@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Treino Prático JS — by Liz</title>
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<header>
+  <h1>Treino Prático Avançado de JS — Liz</h1>
+  <div>
+    <button class="nav-toggle" id="btnNavToggle">Menu</button>
+    <nav class="desktop" id="navDesk">
+      <a href="#" style="margin-right:8px">Home</a>
+      <a href="#" style="margin-right:8px">Produtos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<!-- NAV RESPONSIVO (exercício) -->
+<div class="box">
+  <h2> Menu responsivo (toggle)</h2>
+  <p>Prática: clique em <strong>Menu</strong> no celular (ou redimensione a janela).</p>
+  <nav class="mobile" id="navMobile" style="display:none">
+    <a href="#">Home</a><br/>
+    <a href="#">Produtos</a><br/>
+    <a href="#">Sobre</a><br/>
+    <a href="#">Contato</a>
+  </nav>
+</div>
+
+<!-- VALIDAÇÃO DE FORMULÁRIO -->
+<div class="box">
+  <h2> Validação simples de formulário</h2>
+  <p>Prática: preencha e tente enviar sem e-mail ou com senha curta.</p>
+
+  <form id="formContato">
+    <label>Nome</label>
+    <input type="text" id="nome" placeholder="Seu nome">
+    <label>Email</label>
+    <input type="email" id="email" placeholder="seu@exemplo.com">
+    <label>Senha (mín 6 caracteres)</label>
+    <input type="password" id="senha" placeholder="senha">
+    <div style="margin-top:10px">
+      <button type="submit">Enviar</button>
+    </div>
+    <p id="msgForm" style="color:#b91c1c"></p>
+  </form>
+</div>
+
+<!-- MODAL / POPUP -->
+<div class="box">
+  <h2> Modal (pop-up) de contato</h2>
+  <p>Prática: abrir modal e fechar com botão ou ESC.</p>
+  <button id="openModal">Abrir contato</button>
+
+  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center">
+    <div style="background:#fff;padding:16px;border-radius:8px;min-width:300px;max-width:90%">
+      <h3>Fale com a gente</h3>
+      <p><input id="modalEmail" placeholder="seu@exemplo.com"></p>
+      <p><button id="closeModal">Fechar</button></p>
+    </div>
+  </div>
+</div>
+
+<!-- FILTRO DE BUSCA EM LISTA -->
+<div class="box">
+  <h2> Filtro de busca (lista de produtos)</h2>
+  <p>Prática: digite para filtrar nomes — muito comum em sites.</p>
+  <input class="search-input" id="search" placeholder="Pesquisar produto...">
+  <div class="cards" id="produtos">
+    <div class="card">Camisa azul</div>
+    <div class="card">Tênis esportivo</div>
+    <div class="card">Boné vermelho</div>
+    <div class="card">Relógio digital</div>
+    <div class="card">Mochila resistente</div>
+    <div class="card">Óculos de sol</div>
+  </div>
+</div>
+
+<!-- ABAS (TABS) -->
+<div class="box">
+  <h2> Abas (tabs) — usado em páginas de produto/FAQ</h2>
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-content="desc">Descrição</div>
+    <div class="tab" data-content="specs">Especificações</div>
+    <div class="tab" data-content="reviews">Avaliações</div>
+  </div>
+  <div id="tabContent">
+    <div data-id="desc">Produto excelente para uso diário. Material leve.</div>
+    <div data-id="specs" style="display:none">Peso: 200g • Cor: azul • Material: algodão</div>
+    <div data-id="reviews" style="display:none">5 estrelas — Usuário: João</div>
+  </div>
+</div>
+
+<!-- CARROSSEL SIMPLES -->
+<div class="box">
+  <h2> Carrossel simples (slides)</h2>
+  <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+    <button id="prevSlide">&lt;</button>
+    <div style="flex:1" class="carousel" id="carousel">
+      <div class="slides" id="slides">
+        <div class="slide" style="background:#fde68a">Promo 1 — Oferta</div>
+        <div class="slide" style="background:#c7f9cc">Promo 2 — Frete grátis</div>
+        <div class="slide" style="background:#cfe3ff">Promo 3 — Novidade</div>
+      </div>
+    </div>
+    <button id="nextSlide">&gt;</button>
+  </div>
+  <small>Dica: carrossel automático e botões de navegação.</small>
+</div>
+
+<!-- TOOLTIP -->
+<div class="box">
+  <h2> Tooltip simples</h2>
+  <p>Passe o mouse sobre: <span class="tooltip" data-tip="Somos rápidos no envio!">Envio</span></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
