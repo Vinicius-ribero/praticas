@@ -1,0 +1,2 @@
+# praticas
+praticas de javascript
